@@ -1,0 +1,22 @@
+{
+    "name": "Webpack Extension Example",
+    "version": "1.0",
+    "manifest_version": 3,
+    "description": "A Chrome extension using webpack",
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "action": {
+        "default_title": "Webpack Extension"
+    }
+}
